@@ -1,0 +1,23 @@
+# Sample data file for testing incremental search filter
+
+README.md
+LICENSE
+server.py
+client.py
+config.toml
+requirements.txt
+search_filter.py
+test_search.py
+example_data.txt
+.gitignore
+.git/config
+.git/HEAD
+build/output
+dist/package
+src/main.py
+src/utils.py
+tests/test_main.py
+tests/test_utils.py
+docs/installation.md
+docs/usage.md
+docs/api.md
