@@ -1,0 +1,11 @@
+# Configuration for cat-incremental-search-filter
+
+[pipe]
+name = "\\\\.\\pipe\\cat_incremental_search_filter"
+
+[encoding]
+default = "utf-8"
+
+[search]
+# Case-insensitive search
+case_sensitive = false
