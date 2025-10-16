@@ -95,11 +95,13 @@ All responses: `{"status": "ok|error", "line": "...", "message": "..."}`
 
 ```
 cat-incremental-search-filter/
-├── server.py              # Named pipe server
-├── client.py              # Test client with tkinter UI
-├── search_filter.py       # Core search logic
+├── src/
+│   ├── server.py          # Named pipe server
+│   ├── client.py          # Test client with tkinter UI
+│   └── search_filter.py   # Core search logic
+├── tests/
+│   └── test_search.py     # Unit tests
 ├── config.toml            # Configuration file
-├── test_search.py         # Unit tests
 ├── requirements.txt       # Python dependencies
 ├── example_data.txt       # Sample data
 ├── start_server.bat       # Server startup script
@@ -146,17 +148,17 @@ All requirements from the problem statement have been implemented:
 
 ### Start Server
 ```bash
-python server.py --config-filename config.toml
+python src/server.py --config-filename config.toml
 ```
 
 ### Start Client
 ```bash
-python client.py --config-filename config.toml
+python src/client.py --config-filename config.toml
 ```
 
 ### Run Tests
 ```bash
-python test_search.py -v
+python tests/test_search.py -v
 ```
 
 ## Dependencies

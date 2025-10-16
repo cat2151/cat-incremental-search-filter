@@ -7,8 +7,8 @@ import unittest
 import sys
 import os
 
-# Add parent directory to path to import search_filter module
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+# Add src directory to path to import search_filter module
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'src'))
 
 from search_filter import IncrementalSearchFilter
 
