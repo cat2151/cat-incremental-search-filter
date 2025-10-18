@@ -5,7 +5,7 @@
 ### Terminal 1: Start the Server
 
 ```bash
-python server.py --config-filename config.toml
+python src/server.py --config-filename config.toml
 ```
 
 Output:
@@ -18,7 +18,7 @@ Waiting for client connection...
 ### Terminal 2: Start the Test Client
 
 ```bash
-python client.py --config-filename config.toml
+python src/client.py --config-filename config.toml
 ```
 
 The client window will open with:
@@ -93,7 +93,7 @@ case_sensitive = true
 ### Restart Server
 
 ```bash
-python server.py --config-filename config.toml
+python src/server.py --config-filename config.toml
 ```
 
 Now searches are case-sensitive:

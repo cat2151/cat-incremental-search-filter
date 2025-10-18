@@ -25,7 +25,7 @@ This installs:
 Check that the server can start:
 
 ```bash
-python server.py --config-filename config.toml
+python src/server.py --config-filename config.toml
 ```
 
 You should see:
@@ -52,12 +52,12 @@ Press `Ctrl+C` to stop the server.
 
 **Terminal 1 (Server):**
 ```bash
-python server.py --config-filename config.toml
+python src/server.py --config-filename config.toml
 ```
 
 **Terminal 2 (Client):**
 ```bash
-python client.py --config-filename config.toml
+python src/client.py --config-filename config.toml
 ```
 
 ## Step 4: Try It Out

@@ -16,7 +16,7 @@
         │                      │    │                      │
         │  start_server.bat    │    │  start_client.bat    │
         │  or                  │    │  or                  │
-        │  python server.py    │    │  python client.py    │
+        │  python src/server.py│    │  python src/client.py│
         └──────────┬───────────┘    └──────────┬───────────┘
                    │                           │
                    │                           │
@@ -248,14 +248,14 @@ User Types: "im"
 ```
 config.toml
     │
-    ├─► server.py
+    ├─► src/server.py
     │       │
-    │       ├─► search_filter.py
+    │       ├─► src/search_filter.py
     │       │
     │       └─► win32pipe, win32file
     │           (Windows named pipes)
     │
-    └─► client.py
+    └─► src/client.py
             │
             ├─► tkinter
             │   (GUI)
@@ -263,9 +263,9 @@ config.toml
             └─► win32pipe, win32file
                 (Windows named pipes)
 
-test_search.py
+tests/test_search.py
     │
-    └─► search_filter.py
+    └─► src/search_filter.py
         (Unit tests)
 ```
 
