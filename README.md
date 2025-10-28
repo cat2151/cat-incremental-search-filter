@@ -42,7 +42,7 @@ case_sensitive = false
 Start the server:
 
 ```bash
-python server.py --config-filename config.toml
+python src/server.py --config-filename config.toml
 ```
 
 The server will:
@@ -57,7 +57,7 @@ The server will:
 Start the test client (in a separate terminal):
 
 ```bash
-python client.py --config-filename config.toml
+python src/client.py --config-filename config.toml
 ```
 
 The client will:

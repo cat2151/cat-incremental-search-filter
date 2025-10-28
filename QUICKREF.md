@@ -15,7 +15,7 @@ start_server.bat
 
 Or manually:
 ```bash
-python server.py --config-filename config.toml
+python src/server.py --config-filename config.toml
 ```
 
 ## Start Test Client
@@ -27,18 +27,18 @@ start_client.bat
 
 Or manually:
 ```bash
-python client.py --config-filename config.toml
+python src/client.py --config-filename config.toml
 ```
 
 ## Run Tests
 
 ```bash
-python test_search.py
+python tests/test_search.py
 ```
 
 Or with verbose output:
 ```bash
-python test_search.py -v
+python tests/test_search.py -v
 ```
 
 ## Configuration File
@@ -60,10 +60,10 @@ case_sensitive = false
 
 | File | Purpose |
 |------|---------|
-| `server.py` | Named pipe server for incremental search |
-| `client.py` | Test client with tkinter UI |
-| `search_filter.py` | Core search filter logic (platform-independent) |
-| `test_search.py` | Unit tests for search logic |
+| `src/server.py` | Named pipe server for incremental search |
+| `src/client.py` | Test client with tkinter UI |
+| `src/search_filter.py` | Core search filter logic (platform-independent) |
+| `tests/test_search.py` | Unit tests for search logic |
 | `config.toml` | Configuration file |
 | `requirements.txt` | Python dependencies |
 | `README.md` | Main documentation |
@@ -95,7 +95,7 @@ Restart server.
 
 ### Test with Custom File
 
-Modify `client.py` line that sets `source_filename`:
+Modify `src/client.py` line that sets `source_filename`:
 ```python
 # Change from:
 source_filename = os.path.abspath(__file__)
@@ -145,20 +145,20 @@ pip install -r requirements.txt
 ### Run Tests
 
 ```bash
-python test_search.py -v
+python tests/test_search.py -v
 ```
 
 ### Check Syntax
 
 ```bash
-python -m py_compile server.py
-python -m py_compile client.py
-python -m py_compile search_filter.py
+python -m py_compile src/server.py
+python -m py_compile src/client.py
+python -m py_compile src/search_filter.py
 ```
 
 ### Add New Test
 
-Edit `test_search.py` and add a new test method:
+Edit `tests/test_search.py` and add a new test method:
 ```python
 def test_my_feature(self):
     """Test description."""
@@ -172,7 +172,7 @@ def test_my_feature(self):
 ### IncrementalSearchFilter Class
 
 ```python
-from search_filter import IncrementalSearchFilter
+from src.search_filter import IncrementalSearchFilter
 
 # Create filter
 filter = IncrementalSearchFilter(

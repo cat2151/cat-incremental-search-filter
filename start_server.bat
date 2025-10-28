@@ -4,4 +4,4 @@ echo Starting cat-incremental-search-filter server...
 echo.
 echo Press Ctrl+C to stop the server
 echo.
-python server.py --config-filename config.toml
+python src\server.py --config-filename config.toml
