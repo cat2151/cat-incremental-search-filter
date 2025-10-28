@@ -2,6 +2,32 @@
 
 Windows named pipe based incremental search filter server and client.
 
+## 状況
+
+agentに生成させた直後です
+
+動作確認はこれから
+
+### 今後のロードマップ
+- まず動作確認する
+- example
+    - シンプルな用途ごとに、wrapper script pyを書く
+        - 例、カレントディレクトリ配下のfileを1つ選ぶ
+        - 例、テキストファイル全体から1行選ぶ
+- activator 仮
+    - これ自体は常駐である。
+    - これを名前付きパイプでactivateする、コンパクトなexeを作る
+        - zig ccでWindows/Linux両対応を想定、agentに生成させる想定
+        - このexeが前述のwrapper script同等の機能を、高速に実現する
+
+### スコープ外
+- プレビュー
+    - filterがfile listの場合、
+        - 映像や画像やサウンドデータなら再生や表示や演奏
+        - それがwebviewプレビューできるものなら、プレビュー
+        - MMLの小さいパーツ群なら、それぞれを五線譜に可視化しつつその場で演奏
+            - MMLコンパイル結果をcacheして素早く演奏
+
 ## Features
 
 - **Server**: Resident process that provides incremental search filtering via Windows named pipes
